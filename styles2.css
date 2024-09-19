@@ -38,14 +38,14 @@ table {
 .sidebar {
 	margin-left: 75%;
 	padding: 15px;
-	background: #E9F5FE;
+	background: #008080;
 }
 
 body {
 	color: #B1967C;
 	font-family: "EB Garamond", serif;
 	padding-top: 115px;
-	background: #CDE6FF url(images/bg_body.png) repeat-x;
+	background: #CDE6FF url(images/100.jpg) repeat-x;
 	max-width: 800px;
 	margin: 0 auto;
 }
@@ -62,7 +62,7 @@ h2 {
 .main h2 {
 	color: #F8A064;
 	border-bottom: 2px white solid;
-	background: url(images/bullet_flower.png) no-repeat;
+	background: url(images/101.jpg) no-repeat;
 	padding: 0 0 2px 80px;
 }
 .main p {
