@@ -1,131 +1,186 @@
 /* сброс стилей браузера */
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, 
+table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	vertical-align: baseline;
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+vertical-align: baseline;
 }
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-	display: block;
+display: block;
 }
 body {
-	line-height: 1.2;
+line-height: 1.2;
 }
-ol { 
-	padding-left: 1.4em;
-	list-style: decimal;
+ol {
+padding-left: 1.4em;
+list-style: decimal;
 }
 ul {
-	padding-left: 1.4em;
-	list-style: square;
+padding-left: 1.4em;
+list-style: square;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
-} 
+border-collapse: collapse;
+border-spacing: 0;
+}
 /* конец кода сброса стилей браузера */
 
-.wrapper {
-	width: 960px;
-	margin-right: auto;
-	margin-left: auto;
-    overflow: hidden; /* выравнивание */
+/* веб-шрифты */
+
+@font-face {
+font-family: 'Titillium';
+src: url('fonts/TitilliumText22L001-webfont.eot');
+src: url('fonts/TitilliumText22L001-webfont.eot?#iefix') format('embedded-opentype'),
+url('fonts/TitilliumText22L001-webfont.woff') format('woff'),
+url('fonts/TitilliumText22L001-webfont.ttf') format('truetype'),
+url('fonts/TitilliumText22L001-webfont.svg#TitilliumText22LThin') format('svg');
+font-weight: 100;
+font-style: normal;
+}
+@font-face {
+font-family: 'Titillium';
+src: url('fonts/TitilliumText22L003-webfont.eot');
+src: url('fonts/TitilliumText22L003-webfont.eot?#iefix') format('embedded-opentype'),
+url('fonts/TitilliumText22L003-webfont.woff') format('woff'),
+url('fonts/TitilliumText22L003-webfont.ttf') format('truetype'),
+url('fonts/TitilliumText22L003-webfont.svg#TitilliumText22LRegular') format('svg');
+font-weight: 400;
+font-style: normal;
+}
+@font-face {
+font-family: 'Titillium';
+src: url('fonts/TitilliumText22L005-webfont.eot');
+src: url('fonts/TitilliumText22L005-webfont.eot?#iefix') format('embedded-opentype'),
+url('fonts/TitilliumText22L005-webfont.woff') format('woff'),
+url('fonts/TitilliumText22L005-webfont.ttf') format('truetype'),
+url('fonts/TitilliumText22L005-webfont.svg#TitilliumText22LBold') format('svg');
+font-weight: 700;
+font-style: normal;
+}
+body {
+max-width: 1024px;
+margin: 0 auto;
+}
+header h1 {
+font: 700 64px Titillium, Arial, sans-serif;
+color: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+text-shadow: 0 0 5px white,
+3px 3px 5px rgba(0,0,0,.5);
+}
+nav ul {
+margin: 0;
+padding: 0;
+list-style-type: none;
+}
+nav li {
+display: inline;
+}
+nav a {
+display: inline-block;
+padding: 9px 20px 5px 20px;
+border-radius:20px;
+text-decoration: none;
+font-family: Titillium, Arial, sans-serif;
+font-weight: 700;
+color: white;
+text-shadow: 2px 2px 4px rgba(0,0,0,1);
+text-transform:uppercase;
+font-size: .9em;
+letter-spacing: .1em;
+background-color: rgb(232,113,35);
+background: -webkit-linear-gradient(top, rgba(30,144,255,1),rgba(30,144,255,.5));
+background: -moz-linear-gradient(top, rgba(30,144,255,1),rgba(232,113,35,.5));
+background: -o-linear-gradient(top, rgba(232,113,35,1),rgba(232,113,35,.5));
+background: linear-gradient(top, rgba(232,113,35,1),rgba(232,113,35,.5));
+border: 1px solid rgb(232,113,35);
+margin-right: 5px;
+}
+figcaption strong {
+font-weight: 700;
+display: block;
+}
+footer .copyright {
+font-family: Titillium, Arial, sans-serif;
+font-weight: 700;
+color: white;
+margin: 0 auto;
+max-width: 1024px;
 }
 
-.main {
-	float: right;
-	width: 565px;
-	margin-right: 15px;
-	padding-top: 25px;
+/* стили из практикума главы 14 */
+header {
+position: relative;
+margin-top: 20px;
+padding: 20px 0 0 10px;
+}
+header .badge {
+position: absolute;
+top: -20px;
+left: -90px;
+z-index: -1;
+}
+header nav {
+position: absolute;
+right: -40px;
+top: 45px;
+}
+.gallery figure {
+display: inline-block;
+width: 300px;
+height: 210px;
+margin: 15px;
+position: relative;
+}
+.gallery figcaption {
+position: absolute;
+top: 0%;
+bottom: 0%;
+left: 0;
+right: 0;
+background-color: rgba(153,153,153,.9);
+padding: 20px;
+font-family: Titillium, sans-serif;
+font-weight: 400;
+font-size: .9em;
+color: white;
+opacity:
+0;
+transition: opacity 1.2s ease-out;
+}
+.gallery figure:hover figcaption {
+opacity: 1;
+}
+footer {
+position: fixed;
+bottom: 0;
+left: 0;
+right: 0;
+padding: 10px;
+background-color: black;
+color: white;
 }
 
-.copyright {
-	clear: both;
-	font: bold 12px Tahoma, Geneva, sans-serif;
-	color: #65747E;
-	padding: 5px;
-  margin: 0 15px;
-	border: 1px dotted #98AFBE;
-  border-left: none;
-  border-right: none;
-}
 
 
-.banner h1 {
-	font: normal 48px Georgia, "Times New Roman", Times, serif;
-	text-align: right;
-  color: #272D32;
-}
 
-.main h2 {
-	font: 24px Tahoma, Geneva, sans-serif;
-	margin-bottom: 15px;
-	font-family: Tahoma, Geneva, sans-serif;
-}
-.main p {
-	font: 14px Tahoma, Geneva, sans-serif;
-	color: #323A3F;
-	margin-bottom: 20px;
-	font-family: Tahoma, Geneva, sans-serif;
-}
 
-.announcement h2 {
-	font: italic bold normal 20px Georgia, "Times New Roman", Times, serif;
-	text-align: center;
-	color: #323A3F;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	margin-bottom: 18px;
-}
-.announcement ul {
-	font: 14px Tahoma, Geneva, sans-serif;
-}
 
-/* пользовательские стили  */
-html {
-	height: 100%;
-	background: linear-gradient(345deg, rgba(213,159,133,0.8) 0%, transparent 30%, rgb(88,189,198) 100%),
-              linear-gradient(85deg, rgba(206,129,86,0.59) 0%, rgba(111,219,212,0.78) 45%, transparent 55.00000000000001%, rgba(114,143,210,0.24) 60%, rgba(115,137,211,0.82) 100%),
-              linear-gradient(235deg, rgb(217,165,148) 0%, rgb(89,201,199) 65%, rgb(76,115,197) 95%, rgb(126,151,223) 100%);
-}
-.wrapper {
-	background-image: url(images/lady1.png);
-	background-position: 10px top ;
-	background-repeat: no-repeat;
-}
-.banner {
-	margin-top: 48px;
-}
-.announcement {
-	margin-top: 115px;
-	margin-right: 600px;
-	margin-left: 20px;
-	background: url(images/q.png);
-	background-size: cover;
-	padding: 70px 0 60px 0;
-}
-.main h2 {
-	background-image: url(images/a1.jpg);
-	background-size: 45% 45%;
-	background-repeat: no-repeat;
-	background-position: left bottom;
-	padding-bottom: 20px;
-}
-.announcement li {
-	list-style: none;
-	background-image: url(images/w.png);
-background-size: 20px 20px;
-	background-repeat: no-repeat;
-	padding-left: 25px;
-	margin-bottom: 10px;
-	background-position: 0 4px;
-	margin-left: 30px;
-	margin-right: 40px;
-}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
